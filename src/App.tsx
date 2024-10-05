@@ -1,6 +1,6 @@
 import React from 'react'
 import Hello from './components/Hello.tsx'
-
+import MyButton from './components/MyButton.tsx'
 
 interface User {
   id: number;
@@ -18,14 +18,15 @@ const App = () => {
 
   return (
     <div>
-      <h1>All users</h1>
+      <MyButton/>
+      {/* <h1>All users</h1>
       <ul>
         {
           users.map((user) => {
             return <li key={user.id}>{user.name}</li>
           })
         }
-      </ul>
+      </ul> */}
       {/* {isAdmin ? <Hello/> : <h1>Hello User</h1>} */}
       {/* <Hello /> */}
     </div>
