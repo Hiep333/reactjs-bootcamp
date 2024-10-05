@@ -1,8 +1,21 @@
 import React from 'react'
 
-const MyButton: React.FC = () => {
+
+
+interface BtnProps {
+    customOnClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+const MyButton: React.FC<BtnProps> = ({customOnClick}) => {
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        console.log(e);
+        console.log('Button clicked')
+    }
+
+
     return (
-        <button>Click Me!</button>
+        <button onClick={(e)=>{customOnClick(e)}} >Click Me!</button>
     )
 }
 

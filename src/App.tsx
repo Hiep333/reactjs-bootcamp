@@ -9,16 +9,20 @@ interface User {
 
 const App = () => {
 
-  const isAdmin = true;
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    console.log('Button clicked from the parent btn handler ',e)
+  }
 
-  let users: User[] = [
-    { id: 1, name: 'John' },
-    { id: 2, name: 'Alex' }
-  ]
+  // const isAdmin = true;
+
+  // let users: User[] = [
+  //   { id: 1, name: 'John' },
+  //   { id: 2, name: 'Alex' }
+  // ]
 
   return (
     <div>
-      <MyButton/>
+      <MyButton customOnClick={handleClick} />
       {/* <h1>All users</h1>
       <ul>
         {
